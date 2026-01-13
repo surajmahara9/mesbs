@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpg" href="Image/scl-icon.jpg" sizes="192x192">
+  <title>School Project</title>
+  <link rel="stylesheet" href="mesbs.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <header id="Home">
+    <div class="head"><img src="Image/scl-logo.jpg" alt="School Logo" class="scl-logo" />
+
+      <nav class="menu">
+        <input type="checkbox" id="menu-check" />
+
+        <label for="menu-check" class="menu-toggle"><span class="open">☰</span><span class="close">✖</span>
+        </label>
+        <label for="menu-check" class="menu-overlay"></label>
+        <ul id="nav-menu">
+          <li class="list-item"><a href="#scl-pic-box" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false;">Home</a>
+          </li>
+          <li class="list-item"><a href="#About" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false;">About</a>
+          </li>
+          <li class="list-item"><a href="#Admission-main" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false;">Admission</a>
+          </li>
+          <li class="list-item"><a href="#Facility" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false;">Facility</a>
+          </li>
+          <li class="list-item"><a href="#Program" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false;">Program</a>
+          </li>
+          <li class="list-item"><a href="#Contact" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false;">Contact</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <div id="scl-pic-box">
+    <div class="welcome-box">
+      <h1 class="wel-name">WELCOME<br>TO</h1>
+      <h1 class="scl-name">Mount Everest Secondary Boarding School, Siraha-07</h1>
+      <p class="sologan-1">–INSPIRE, EMPOWER AND TRANSFORM–</p>
+      <p class="sologan-2">
+        Enpowering students to achieve execellence through quality education
+        and innvoation
+      </p>
+      <button class="apply-btn"><a href="#Admission">Apply Now</a></button>
+    </div>
+  </div>
+
+  <div id="About">
+    <h1 class="about-text">About us</h1>
+    <div class="about-box">
+      <div class="text-box">
+        <p class="about-text-1">
+          Mount Everest Secondary Boarding School (MESBS), established in
+          1983 A.D. (2040 B.S.), is one of the most trusted and reputed
+          academic institutions in Siraha District, Madhesh Province, Nepal.
+          For over four decades, the school has been dedicated to providing
+          quality education, discipline, and holistic development to
+          students from early childhood to higher secondary level. Located
+          at Siraha-7, MESBS continues its mission of shaping young minds
+          with integrity, innovation, and commitment.<br /><br />
+          MESBS offers Montessori-based Pre-School (PG, Nursery, LKG, UKG),
+          School Level (Class 1–10), and +2 programs in Management, Science, Law, and
+          Education under the National Examinations Board (NEB). MESBS
+          ensures that every student achieves academic excellence,
+          confidence, and essential life skills. The school provides a wide
+          range of facilities including transportation, hostels for boys and
+          girls, library, science and computer laboratories, audio-visual
+          classrooms, seminar hall, and well-furnished state-of-the-art
+          classrooms. Extra-curricular activities, sports, music, tours, and
+          counseling services help students grow physically, mentally,
+          emotionally, and socially.<br /><br />
+          MESBS is powered by a team of experienced, trained, and dedicated
+          teachers who focus on discipline, moral values, creativity,
+          communication skills, and leadership abilities. Through balanced
+          academics and co-curricular activities, the school aims to develop
+          responsible, confident, and capable citizens of the future. MESBS
+          ensures that every student learns in a safe, student-friendly, and
+          achievement-oriented environment.
+        </p>
+      </div><img src="Image/about-scl.jpg" alt="school about image" class="scl-about-pic" />
+    </div>
+  </div>
+
+
+  <div id="Admission-main">
+    <h1 class="admission-name">Admission</h1>
+    <div id="Admission">
+      <p class="admission-text">
+        Join Mount Everest Secondary Boarding School and start your journey
+        towards a bright future. We welcome application from students
+        worldwide.
+      </p>
+      <div id="admission-form">
+        <h1 class="Online-text">Online Form</h1>
+
+        <input type="radio" name="step" id="step1" checked hidden>
+        <input type="radio" name="step" id="step2" hidden>
+        <input type="radio" name="step" id="step3" hidden>
+        <input type="radio" name="step" id="step4" hidden>
+
+        <div class="steps">
+          <label for="step1">1</label>
+          <label for="step2">2</label>
+          <label for="step3">3</label>
+          <label for="step4">4</label>
+        </div>
+
+        <div class="form-step step1">
+          <h2>Student Basic Details</h2>
+
+          <div class="form-group">
+            <label>Student Full Name </label>
+            <input type="text" placeholder="Enter Full Name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Date of Birth (AD)</label>
+            <input type="date" required>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <select required>
+              <option value="">Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <label for="step2" class="next">Next</label>
+        </div>
+
+        <div class="form-step step2">
+          <h2>Parent / Address Details</h2>
+
+          <div class="form-group">
+            <label>Father's Name </label>
+            <input type="text" placeholder="Enter Father's Name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Mother's Name </label>
+            <input type="text" placeholder="Enter Mother's Name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Contact Number </label>
+            <input type="tel" placeholder="Enter Phone Number" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="example@gmail.com">
+          </div>
+
+          <div class="form-group">
+            <label>Permanent Address </label>
+            <input type="text" placeholder="Enter Permanent Address" required>
+          </div>
+
+          <div class="btn-group">
+            <label for="step1" class="back">Back</label>
+            <label for="step3" class="next">Next</label>
+          </div>
+        </div>
+
+        <div class="form-step step3">
+          <h2>Academic Information</h2>
+
+          <div class="form-group">
+            <label>Applying for Class </label>
+            <select required>
+              <option value="">Select Class</option>
+              <option value="PG">PG</option>
+              <option value="Nursery">Nursery</option>
+              <option value="LKG">LKG</option>
+              <option value="UKG">UKG</option>
+              <option value="One-1">One-1</option>
+              <option value="Two-2">Two-2</option>
+              <option value="Three-3">Three-3</option>
+              <option value="Four-4">Four-4</option>
+              <option value="Five-5">Five-5</option>
+              <option value="Six-6">Six-6</option>
+              <option value="Seven-7">Seven-7</option>
+              <option value="Eight-8">Eight-8</option>
+              <option value="Nine-9">Nine-9</option>
+              <option value="Ten-10">Ten-10</option>
+              <option value="+2 Science">+2 Science</option>
+              <option value="+2 Management">+2 Management</option>
+              <option value="+2 Law">+2 Law</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Previous School Name</label>
+            <input type="text" placeholder="Enter Previous School Name">
+          </div>
+
+          <div class="form-group">
+            <label>Last Class Passed</label>
+            <input type="text" placeholder="Enter Last Class Passed">
+          </div>
+
+          <div class="form-group">
+            <label>Transfer Certificate (TC)</label>
+            <input type="file">
+          </div>
+
+          <div class="btn-group">
+            <label for="step2" class="back">Back</label>
+            <label for="step4" class="next">Next</label>
+          </div>
+        </div>
+
+
+        <div class="form-step step4">
+          <h2>Documents & Additional Info</h2>
+
+          <div class="form-group">
+            <label>Student Photo (PP Size)</label>
+            <input type="file">
+          </div>
+
+          <div class="form-group">
+            <label>Birth Certificate</label>
+            <input type="file">
+          </div>
+
+          <div class="form-group">
+            <label>SEE Marksheet</label>
+            <input type="file">
+          </div>
+          <div class="form-group">
+            <label>Transportation Required?</label>
+            <select>
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <label for="step3" class="back">Back</label>
+          <button type="submit" class="submit">Submit Form</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="Facility">
+    <h1 class="our-fac">Our Facility</h1>
+    <div class="facility-section">
+      <div class="facility-box">
+        <div class="facility-item">
+          <i class="fa-solid fa-hotel"></i>
+          <h3>Boys Hostel</h3>
+          <p>
+            We provide a safe and clean with comfortable rooms, 24/7 security,
+            nutritious food, and a study-friendly environment.
+          </p>
+        </div>
+
+        <div class="facility-item">
+          <i class="fa-solid fa-hotel"></i>
+          <h3>Girls Hostel</h3>
+          <p>
+            We provide a safe and clean with comfortable rooms, 24/7 security,
+            nutritious food, and a study-friendly environment.
+          </p>
+        </div>
+
+        <div class="facility-item">
+          <i class="fa-solid fa-bus"></i>
+          <h3>Transportation</h3>
+          <p>
+            Safe and reliable school bus service for all students with
+            well-maintained vehicles.
+          </p>
+        </div>
+
+        <div class="facility-item">
+          <i class="fa-solid fa-book"></i>
+          <h3>Library</h3>
+          <p>
+            A well-stocked library with books, journals, and digital resources
+            for students.
+          </p>
+        </div>
+
+        <div class="facility-item">
+          <i class="fa-solid fa-flask"></i>
+          <h3>Science Lab</h3>
+          <p>
+            Fully-equipped labs for Physics, Chemistry, and Biology with
+            modern instruments.
+          </p>
+        </div>
+
+        <div class="facility-item">
+          <i class="fa-solid fa-computer"></i>
+          <h3>Computer Lab</h3>
+          <p>
+            Modern computer lab with internet for digital learning
+            and research.
+          </p>
+        </div>
+
+        <div class="facility-item">
+          <i class="fa-solid fa-video"></i>
+          <h3>Audio-Visual Class</h3>
+          <p>
+            Modern audio-visual classrooms with projectors and smart
+            boards.
+          </p>
+        </div>
+
+        <div class="facility-item">
+          <i class="fa-solid fa-person-chalkboard"></i>
+          <h3>Seminar Hall</h3>
+          <p>
+            Spacious seminar hall equipped with modern audio-visual
+            facilities. Ideal for workshops & presentations.
+          </p>
+        </div>
+        <div class="facility-item">
+          <i class="fa-solid fa-puzzle-piece"></i>
+          <h3>ECA</h3>
+          <p>
+            Wide range of activities sports, arts, music, and debate.
+            Encourages development and students’ talents and
+            creativity.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="Program">
+      <h1 class="prog-name">Our Program</h1>
+      <div class="program-box">
+        <div class="PG">
+          <h1 class="pg-name">PG Level <br />(UKG)</h1>
+          <p class="pg-text">
+            Early childhood education with caring environment and basic
+            learning skills.
+          </p>
+        </div>
+        <div class="BL">
+          <h1 class="bl-name">Basic Level <br />(Class 1–5)</h1>
+          <p class="bl-text">
+            Strong foundation in reading, writing, mathematics and moral
+            education.
+          </p>
+        </div>
+        <div class="ML">
+          <h1 class="ml-name">Middle Level <br />(Class 6–8)</h1>
+          <p class="ml-text">
+            Concept-based learning with science, math and technology focus.
+          </p>
+        </div>
+        <div class="SL">
+          <h1 class="sl-name">Secondary Level <br />(Class 9–10)</h1>
+          <p class="sl-text">
+            SEE oriented teaching with regular tests and exam preparation.
+          </p>
+        </div>
+        <div class="plus-Sci">
+          <h1 class="sci-name">+2 Science</h1>
+          <p class="sci-text">
+            Physics, Chemistry, Biology / Mathematics with practical lab
+            classes.
+          </p>
+        </div>
+        <div class="plus-Man">
+          <h1 class="man-name">+2 Management</h1>
+          <p class="man-text">
+            Business Studies, Account, Economics and computer education.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="CONTACT">
+      <h1 class="contact-name">Contact Us</h1>
+      <div id="Contact">
+        <div class="contact-box">
+          <div class="cont-detail">
+            <h3 class="cont-info">Contact Information</h3>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>Siraha-07, Siraha District, Madhesh Pradesh, Nepal</p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <p>033-520623, +977-9842994125, +977-9841625827</p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p>mounteverestschool2040@gmail.com</p>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <p> Summer Season :- Sunday – Friday : 6 AM – 12 PM<br>Winter Season :- Sunday – Friday : 9 AM – 4 PM
+              </p>
+            </div>
+
+            <div class="contact-item"><a href="https://www.facebook.com/MountEverestSiraha" target="_blank"
+                class="fb-link">
+                <i class="fa-brands fa-facebook"></i><span>Follow us</span>
+              </a>
+            </div>
+          </div>
+          <div class="cont-map">
+            <iframe src="https://www.google.com/maps?q=Mount+Everest+Secondary+Boarding+School+Siraha&output=embed"
+              width="100%" height="100%" style="border: 0" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <hr />
+        <h4 class="dev-name">
+          &copy;2026 MESBS. All right reserved || Developed by:- Suraj Mahara
+        </h4>
+      </div>
+    </div>
+</body>
+
+</html>
