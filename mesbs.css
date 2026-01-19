@@ -80,7 +80,7 @@ ul {
 }
 
 .list-link {
-  color:black;
+  color: black;
   text-decoration: none;
   font-size: 20px;
 }
@@ -107,9 +107,11 @@ ul {
     background: black;
     transition: 0.3s;
   }
-  .list-link{
-    color:white;
+
+  .list-link {
+    color: white;
   }
+
   .menu-toggle {
     display: block;
   }
@@ -178,9 +180,11 @@ ul {
   .menu-toggle {
     display: block;
   }
-  .list-link{
-    color:white;
+
+  .list-link {
+    color: white;
   }
+
   #nav-menu label {
     display: block;
     cursor: pointer;
@@ -384,12 +388,12 @@ ul {
   .welcome-box {
     padding: 45px 25px;
     border-radius: 22px;
-    max-width: 300px;
+    max-width: 250px;
 
   }
 
   .wel-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .scl-name {
@@ -398,11 +402,11 @@ ul {
   }
 
   .sologan-1 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .sologan-2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.1;
   }
 }
@@ -627,8 +631,8 @@ ul {
 @media (max-width:668px) {
 
   .facility-box {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   #Facility .our-fac {
@@ -636,7 +640,8 @@ ul {
   }
 
   .facility-item {
-    height: 300px;
+    height: 320px;
+    padding-bottom: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
   }
 
@@ -654,8 +659,8 @@ ul {
 
 
 
-@media (min-width:669px) and (max-width:920px){
-  
+@media (min-width:669px) and (max-width:920px) {
+
   .facility-box {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -677,7 +682,7 @@ ul {
   }
 
   .facility-item p {
-    font-size:16px;
+    font-size: 16px;
     line-height: 1.2;
     padding: 0px 5px 5px 5px;
   }
@@ -766,15 +771,20 @@ ul {
   .whyus-grid {
     grid-template-columns: 1fr;
   }
-.whyus-card {
-  height: 230px;
-}
+
+  .whyus-card {
+    height: 230px;
+
+  }
+
   .whyus-card h3 {
     font-size: 22px;
   }
-  .whyus-card p{
-    padding-bottom: 5px;
-  line-height: 1.1;
+
+  .whyus-card p {
+    font-size: 15px;
+    padding-bottom: 10px;
+    line-height: 1.1;
 
   }
 
@@ -784,17 +794,19 @@ ul {
 }
 
 
-@media (min-width:669px) and (max-width:920px){
-    .whyus-name {
+@media (min-width:669px) and (max-width:920px) {
+  .whyus-name {
     font-size: 2.2rem;
   }
 
   .whyus-text {
     font-size: 1.2rem;
   }
-.whyus-card{
-  height: 220px;
-}
+
+  .whyus-card {
+    height: 220px;
+  }
+
   .whyus-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -802,9 +814,10 @@ ul {
   .whyus-card h3 {
     font-size: 24px;
   }
-  .whyus-card p{
-    padding-bottom:15px;
-  line-height:1;
+
+  .whyus-card p {
+    padding-bottom: 15px;
+    line-height: 1;
 
   }
 
@@ -815,8 +828,8 @@ ul {
 
 
 
-  
-#Program { 
+
+#Program {
   width: 100%;
   padding: 20px 0;
   margin: 50px auto;
@@ -925,41 +938,47 @@ ul {
   .program-item {
     grid-template-columns: 1fr;
   }
-  .prog-num{
-     width:50px;
-  height:50px;
-  margin: auto;
+
+  .prog-num {
+    width: 50px;
+    height: 50px;
+    margin: auto;
   }
-  .prog-content h3{
+
+  .prog-content h3 {
     font-size: 24px;
     text-align: center;
   }
-  .prog-content p{
+
+  .prog-content p {
     font-size: 15px;
     text-align: center;
   }
 }
 
 
-@media (min-width:669px) and (max-width:920px){
- .prog-name {
+@media (min-width:669px) and (max-width:920px) {
+  .prog-name {
     font-size: 2.2rem;
   }
 
   .program-item {
     grid-template-columns: 50px 1fr;
   }
-  .prog-num{
-     width:58px;
-  height:58px;
+
+  .prog-num {
+    width: 58px;
+    height: 58px;
   }
-  .prog-content h3{
+
+  .prog-content h3 {
     font-size: 26px;
   }
-  .prog-content p{
+
+  .prog-content p {
     font-size: 16px;
 
-  } 
+  }
 }
 
 
@@ -973,7 +992,7 @@ ul {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
-  
+
 }
 
 #Contact {
@@ -1089,8 +1108,12 @@ hr {
     font-size: 23px;
   }
 
+  .contact-item p {
+    font-size: 15px;
+  }
+
   .fb-link span {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .cont-map {
@@ -1102,16 +1125,16 @@ hr {
   }
 
   .dev-name {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 
-@media (min-width:669px) and (max-width:920px){
-  
+@media (min-width:669px) and (max-width:920px) {
+
   .contact-box {
- display: grid;
-  grid-template-columns:1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     max-width: 700px;
   }
 
@@ -1138,6 +1161,10 @@ hr {
     font-size: 24px;
   }
 
+  .contact-item p {
+    font-size: 16px;
+  }
+
   .fb-link span {
     font-size: 17px;
   }
@@ -1153,4 +1180,4 @@ hr {
   .dev-name {
     font-size: 14px;
   }
-} 
+}

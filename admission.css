@@ -577,9 +577,11 @@ hr {
   .contact-item i {
     font-size: 23px;
   }
-
+ .contact-item p{
+  font-size: 15px;
+ }
   .fb-link span {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .cont-map {
