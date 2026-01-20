@@ -638,8 +638,11 @@ ul {
   #Facility .our-fac {
     font-size: 2rem;
   }
-
+  .facility-box {
+  gap: 30px;
+}
   .facility-item {
+    max-width:400px;
     height: 320px;
     padding-bottom: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
@@ -774,7 +777,7 @@ ul {
 
   .whyus-card {
     height: 230px;
-
+    max-width:340px;
   }
 
   .whyus-card h3 {
