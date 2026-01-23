@@ -638,8 +638,11 @@ ul {
   #Facility .our-fac {
     font-size: 2rem;
   }
-
+  .facility-box {
+  gap: 30px;
+}
   .facility-item {
+    max-width:400px;
     height: 320px;
     padding-bottom: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
@@ -774,7 +777,7 @@ ul {
 
   .whyus-card {
     height: 230px;
-
+    max-width:340px;
   }
 
   .whyus-card h3 {
@@ -1109,7 +1112,7 @@ ul {
   background: #0b6dff;
   color: #fff;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1163,6 +1166,7 @@ ul {
     width: 50px;
     height: 50px;
     margin: auto;
+    font-size: 18px;
   }
 
   .prog-content h3 {
@@ -1189,6 +1193,7 @@ ul {
   .prog-num {
     width: 58px;
     height: 58px;
+    font-size: 20px;
   }
 
   .prog-content h3 {
