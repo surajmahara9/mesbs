@@ -14,6 +14,9 @@
   <title>Mount Everest Secondary Boarding School, Siraha-07</title>
 
   <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Open+Sans&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -106,39 +109,6 @@
     </div>
 
   </div>
-  <script>
-    let i = 0, f = 0;
-    let j = 0, g = 0;
-    let k = 0, h = 0;
-
-    onscroll = () => {
-
-      let c = std_counter;
-      if (!f && c.getBoundingClientRect().top < innerHeight) {
-        f = 1;
-        let t = setInterval(
-          () => i > 1000
-            ? (c.innerText = 1000, clearInterval(t))
-            : (c.innerText = i, i += 3)
-          , 1);
-      }
-
-      let d = year_counter;
-      if (!g && d.getBoundingClientRect().top < innerHeight) {
-        g = 1;
-        let u = setInterval(
-          () => j > 40 ? (d.innerText = 40, clearInterval(u)) : (d.innerText = j, j++)
-          , 30);
-      }
-
-      let e = ser_counter;
-      if (!h && e.getBoundingClientRect().top < innerHeight) {
-        h = 1;
-        let v = setInterval(
-          () => k > 100 ? (e.innerText = 100, clearInterval(v)) : (e.innerText = k, k++), 10);
-      }
-    }
-  </script>
 
   <div id="Facility">
     <h1 class="our-fac">Our Facility</h1>
