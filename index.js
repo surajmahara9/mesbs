@@ -13,7 +13,7 @@ onscroll = () => {
       () =>
         i > 1000
           ? ((c.innerText = 1000), clearInterval(t))
-          : ((c.innerText = i), (i +=2)),
+          : ((c.innerText = i), (i += 2)),
       1,
     );
   }
@@ -44,33 +44,154 @@ onscroll = () => {
 };
 
 function checkStep1() {
-    let std = document.querySelector('[name="student_name"]');
-    let std_name_error = document.getElementById("std-name-error");
+  let std = document.querySelector('[name="student_name"]');
+  let std_name_req = document.getElementById("std-name-req");
 
-    let dob = document.querySelector('[name="dob"]');
-    let gen = document.querySelector('[name="gender"]');
+  let dob = document.querySelector('[name="dob"]');
+  let dob_req = document.getElementById("dob-req");
 
-    // Student name validation
-    std.oninput= function(){ 
-  std_name_error.innerText = "";
+  let gen = document.querySelector('[name="gender"]');
+  let gen_req = document.getElementById("gender-req");
+
+  std.oninput = function () {
+    std_name_req.innerText = "";
+  };
+  dob.oninput = function () {
+    dob_req.innerText = "";
+  };
+  gen.onchange = function () {
+    gen_req.innerText = "";
+  };
+
+  if (std.value === "") {
+    std_name_req.innerText = "Student name required!";
+    std.focus();
+    return;
+  }
+
+  if (dob.value === "") {
+    dob_req.innerText = "Date of birth required!";
+    dob.focus();
+    return;
+  }
+
+  if (gen.value === "") {
+    gen_req.innerText = "Please select gender!";
+    gen.focus();
+    return;
+  }
+
+  document.getElementById("step2").checked = true;
 }
-    if (std.value === "") {
-        std_name_error.innerText = "Student name required!";
-        std.focus();
-        return;       
-    } else {
-        std_name_error.innerText = "";
-    }
 
+function checkStep2() {
+  let father = document.querySelector('[name="father_name"]');
+  let father_req = document.getElementById("father-req");
 
-    document.getElementById("step2").checked = true;
+  let mother = document.querySelector('[name="mother_name"]');
+  let mother_req = document.getElementById("mother-req");
+
+  let phone = document.querySelector('[name="phone"]');
+  let phone_req = document.getElementById("phone-req");
+
+  let address = document.querySelector('[name="address"]');
+  let address_req = document.getElementById("address-req");
+
+  father.oninput = function () {
+    father_req.innerText = "";
+  };
+  mother.oninput = function () {
+    mother_req.innerText = "";
+  };
+  phone.oninput = function () {
+    phone_req.innerText = "";
+  };
+  address.oninput = function () {
+    address_req.innerText = "";
+  };
+
+  if (father.value.trim() === "") {
+    father_req.innerText = "Father name required!";
+    father.focus();
+    return;
+  }
+
+  if (mother.value.trim() === "") {
+    mother_req.innerText = "Mother name required!";
+    mother.focus();
+    return;
+  }
+
+  if (phone.value.trim() === "") {
+    phone_req.innerText = "Phone number required!";
+    phone.focus();
+    return;
+  }
+
+  if (address.value.trim() === "") {
+    address_req.innerText = "Address required!";
+    address.focus();
+    return;
+  }
+
+  document.getElementById("step3").checked = true;
 }
 
-// Optional: student name error auto clear on blur
-std = document.querySelector('[name="student_name"]');
-std.onblur = function() {
-    let std_name_error = document.getElementById("std-name-error");
-    if (std.value !== "") {
-        std_name_error.innerText = "";
-    }
-};
+function checkStep3() {
+  let apply_class = document.querySelector('[name="apply_class"]');
+  let apply_class_req = document.getElementById("applyclass-req");
+
+  apply_class.onchange = function () {
+    apply_class_req.innerText = "";
+  };
+
+  if (apply_class.value === "") {
+    apply_class_req.innerText = "Please select a class!";
+    apply_class.focus();
+    return;
+  }
+  document.getElementById("step4").checked = true;
+}
+
+function checkStep4() {
+  let std_pic = document.querySelector('[name="student_photo"]');
+  let std_pic_req = document.getElementById("std-pic-req");
+  let birth_cert = document.querySelector('[name="birth_certificate"]');
+  let birth_cert_req = document.getElementById("birth-cert-req");
+  let transport = document.querySelector('[name="transport"]');
+  let transport_req = document.getElementById("transport-req");
+
+  std_pic.onchange = function () {
+    std_pic_req.innerText = "";
+  };
+  birth_cert.onchange = function () {
+    birth_cert_req.innerText = "";
+  };
+  transport.onchange = function () {
+    transport_req.innerText = "";
+  };
+
+  if (!std_pic.files || std_pic.files.length === 0) {
+    std_pic_req.innerText = "Please upload student photo!";
+    std_pic.focus();
+    return;
+  }
+
+  if (!birth_cert.files || birth_cert.files.length === 0) {
+    birth_cert_req.innerText = "Please upload birth certificate!";
+    birth_cert.focus();
+    return;
+  }
+
+  if (transport.value === "") {
+    transport_req.innerText = "Please select transportation option!";
+    transport.focus();
+    return;
+  }
+
+  document.getElementById("submission_date").value = new Date()
+    .toISOString()
+    .split("T")[0];
+
+  document.querySelector("form").submit();
+}
