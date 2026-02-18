@@ -1,377 +1,301 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mount Everest Secondary Boarding School, Siraha-07</title>
-    <link rel="stylesheet" href="../index.css" />
-    <script src="../index.js" defer></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <header id="Home">
-      <div class="head">
-        <img src="../Image/scl-icon.png" alt="School Logo" class="scl-logo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mount Everest Secondary Boarding School, Siraha-07</title>
+  <link rel="stylesheet" href="../index.css" />
+  <script src="../index.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
 
-        <nav class="menu">
-          <input type="checkbox" id="menu-check" />
+<body>
+  <header id="Home">
+    <div class="head">
+      <img src="../Image/scl-icon.png" alt="School Logo" class="scl-logo" />
 
-          <label for="menu-check" class="menu-toggle"
-            ><i class="fa-solid fa-bars open"></i
-            ><i class="fa-solid fa-x close"></i>
-          </label>
-          <label for="menu-check" class="menu-overlay"></label>
-          <ul id="nav-menu">
-            <li class="list-item">
-              <a
-                href="../index.html"
-                class="list-link"
-                onclick="document.getElementById('menu-check').checked = false"
-                >Home</a
-              >
-            </li>
-            <li class="list-item">
-              <a
-                href="../index.html#About"
-                class="list-link"
-                onclick="document.getElementById('menu-check').checked = false"
-                >About</a
-              >
-            </li>
-            <li class="list-item">
-              <a
-                href="#Admission-main"
-                class="list-link"
-                onclick="document.getElementById('menu-check').checked = false"
-                >Admission</a
-              >
-            </li>
-            <li class="list-item">
-              <a
-                href="../index.html#Facility"
-                class="list-link"
-                onclick="document.getElementById('menu-check').checked = false"
-                >Facility</a
-              >
-            </li>
-            <li class="list-item">
-              <a
-                href="../index.html#Program"
-                class="list-link"
-                onclick="document.getElementById('menu-check').checked = false"
-                >Program</a
-              >
-            </li>
-            <!-- 
+      <nav class="menu">
+        <input type="checkbox" id="menu-check" />
+
+        <label for="menu-check" class="menu-toggle"><i class="fa-solid fa-bars open"></i><i
+            class="fa-solid fa-x close"></i>
+        </label>
+        <label for="menu-check" class="menu-overlay"></label>
+        <ul id="nav-menu">
+          <li class="list-item">
+            <a href="../index.html" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false">Home</a>
+          </li>
+          <li class="list-item">
+            <a href="../index.html#About" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false">About</a>
+          </li>
+          <li class="list-item">
+            <a href="#Admission-main" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false">Admission</a>
+          </li>
+          <li class="list-item">
+            <a href="../index.html#Facility" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false">Facility</a>
+          </li>
+          <li class="list-item">
+            <a href="../index.html#Program" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false">Program</a>
+          </li>
+          <!-- 
           <li class="list-item"><a href="#" class="list-link"
               onclick="document.getElementById('menu-check').checked = false;">Gallery</a>
           </li> -->
-            <li class="list-item">
-              <a
-                href="#CONTACT"
-                class="list-link"
-                onclick="document.getElementById('menu-check').checked = false"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <div id="Admission-main">
-      <h1 class="admission-name">Admission</h1>
-      <div id="Admission">
-        <p class="admission-text">
-          Join Mount Everest Secondary Boarding School and start your journey
-          towards a bright future. We welcome application from students
-          worldwide.
-        </p>
-        <form
-          id="admission-form"
-          action="submit_admission.php"
-          method="POST"
-          enctype="multipart/form-data"
-        >
-          <h1 class="Online-text">Online Form</h1>
-
-          <input type="radio" name="step" id="step1" checked hidden />
-          <input type="radio" name="step" id="step2" hidden />
-          <input type="radio" name="step" id="step3" hidden />
-          <input type="radio" name="step" id="step4" hidden />
-
-          <div class="steps">
-            <label>1</label>
-            <label>2</label>
-            <label>3</label>
-            <label>4</label>
-          </div>
-
-          <div class="form-step step1">
-            <h2>Student Basic Details</h2>
-
-            <div class="form-group">
-              <label>Student Full Name </label>
-              <input
-                type="text"
-                name="student_name"
-                placeholder="Enter Full Name"
-                required
-              />
-              <span id="std-name-req"></span>
-            </div>
-
-            <div class="form-group">
-              <label>Date of Birth (AD)</label>
-              <input type="date" name="dob" required />
-              <span id="dob-req"></span>
-            </div>
-
-            <div class="form-group">
-              <label>Gender</label>
-              <select name="gender" required>
-                <option value="">Select Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-              </select>
-              <span id="gender-req"></span>
-            </div>
-
-            <button type="button" onclick="checkStep1()" class="next">
-              Next
-            </button>
-          </div>
-
-          <div class="form-step step2">
-            <h2>Parent / Address Details</h2>
-
-            <div class="form-group">
-              <label>Father's Name </label>
-              <input
-                type="text"
-                name="father_name"
-                placeholder="Enter Father's Name"
-                required
-              />
-              <span id="father-req"></span>
-            </div>
-
-            <div class="form-group">
-              <label>Mother's Name </label>
-              <input
-                type="text"
-                name="mother_name"
-                placeholder="Enter Mother's Name"
-                required
-              />
-              <span id="mother-req"></span>
-            </div>
-
-            <div class="form-group">
-              <label>Contact Number </label>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Enter Phone Number"
-                required
-              />
-              <span id="phone-req"></span>
-            </div>
-
-            <div class="form-group">
-              <label>Email Address</label>
-              <input
-                type="email"
-                name="parent_email"
-                placeholder="example@gmail.com"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label>Permanent Address </label>
-              <input
-                type="text"
-                name="address"
-                placeholder="Enter Permanent Address"
-                required
-              />
-              <span id="address-req"></span>
-            </div>
-
-            <div class="btn-group">
-              <label for="step1" class="back">Back</label>
-              <button type="button" onclick="checkStep2()" class="next">
-                Next
-              </button>
-            </div>
-          </div>
-
-          <div class="form-step step3">
-            <h2>Academic Information</h2>
-
-            <div class="form-group">
-              <label>Applying for Class </label>
-              <select name="apply_class" required>
-                <option value="">Select Class</option>
-                <option value="PG">PG</option>
-                <option value="Nursery">Nursery</option>
-                <option value="LKG">LKG</option>
-                <option value="UKG">UKG</option>
-                <option value="One-1">One-1</option>
-                <option value="Two-2">Two-2</option>
-                <option value="Three-3">Three-3</option>
-                <option value="Four-4">Four-4</option>
-                <option value="Five-5">Five-5</option>
-                <option value="Six-6">Six-6</option>
-                <option value="Seven-7">Seven-7</option>
-                <option value="Eight-8">Eight-8</option>
-                <option value="Nine-9">Nine-9</option>
-                <option value="+2 Science">+2 Science</option>
-                <option value="+2 Management">+2 Management</option>
-                <option value="+2 Law">+2 Law</option>
-              </select>
-              <span id="applyclass-req"></span>
-            </div>
-
-            <div class="form-group">
-              <label>Previous School Name</label>
-              <input
-                type="text"
-                name="previous_school"
-                placeholder="Enter Previous School Name"
-              />
-            </div>
-
-            <div class="form-group">
-              <label>Last Class Passed</label>
-              <input
-                type="text"
-                name="last_class"
-                placeholder="Enter Last Class Passed"
-              />
-            </div>
-
-            <div class="form-group">
-              <label>Transfer Certificate (TC)</label>
-              <input type="file" name="tc_photo" />
-            </div>
-
-            <div class="btn-group">
-              <label for="step2" class="back">Back</label>
-              <button type="button" onclick="checkStep3()" class="next">
-                Next
-              </button>
-            </div>
-          </div>
-
-          <div class="form-step step4">
-            <h2>Documents & Additional Info</h2>
-
-            <div class="form-group">
-              <label>Student Photo </label>
-              <input type="file" name="student_photo" />
-              <span id="std-pic-req"></span>
-            </div>
-
-            <div class="form-group">
-              <label>Birth Certificate</label>
-              <input type="file" name="birth_certificate" />
-              <span id="birth-cert-req"></span>
-            </div>
-
-            <div class="form-group">
-              <label>SEE Marksheet</label>
-              <input type="file" name="see_certificate" />
-            </div>
-
-            <div class="form-group">
-              <label>Transportation Required?</label>
-              <select name="transport" required>
-                <option value="">Select</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-              <span id="transport-req"></span>
-              <input
-                type="hidden"
-                name="submission_date"
-                id="submission_date"
-              />
-            </div>
-
-            <label for="step3" class="back">Back</label>
-            <button type="button" onclick="checkStep4()" class="submit">
-              Submit Form
-            </button>
-          </div>
-        </form>
-      </div>
+          <li class="list-item">
+            <a href="#CONTACT" class="list-link"
+              onclick="document.getElementById('menu-check').checked = false">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div id="CONTACT">
-      <h1 class="contact-name">Contact Us</h1>
-      <div id="Contact">
-        <div class="contact-box">
-          <div class="cont-detail">
-            <h3 class="cont-info">Contact Information</h3>
 
-            <div class="contact-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <p>Siraha-07, Siraha District, Madhesh Pradesh, Nepal</p>
-            </div>
+  <div id="Admission-main">
+    <h1 class="admission-name">Admission</h1>
+    <div id="Admission">
+      <p class="admission-text">
+        Join Mount Everest Secondary Boarding School and start your journey
+        towards a bright future. We welcome application from students
+        worldwide.
+      </p>
+      <form id="admission-form">
+        <h1 class="Online-text">Online Form</h1>
 
-            <div class="contact-item">
-              <i class="fa-solid fa-phone"></i>
-              <p>033-520623, +977-9842994125, +977-9841625827</p>
-            </div>
+        <input type="radio" name="step" id="step1" checked hidden />
+        <input type="radio" name="step" id="step2" hidden />
+        <input type="radio" name="step" id="step3" hidden />
+        <input type="radio" name="step" id="step4" hidden />
 
-            <div class="contact-item">
-              <i class="fa-solid fa-envelope"></i>
-              <p>mounteverestschool2040@gmail.com</p>
-            </div>
+        <div class="steps">
+          <label>1</label>
+          <label>2</label>
+          <label>3</label>
+          <label>4</label>
+        </div>
 
-            <div class="contact-item">
-              <i class="fa-solid fa-clock"></i>
-              <p>
-                Summer Season :- Sunday – Friday : 6 AM – 12 PM<br />Winter
-                Season :- Sunday – Friday : 9 AM – 4 PM
-              </p>
-            </div>
+        <div class="form-step step1">
+          <h2>Student Basic Details</h2>
 
-            <div class="contact-item">
-              <a
-                href="https://www.facebook.com/MountEverestSiraha"
-                target="_blank"
-                class="fb-link"
-              >
-                <i class="fa-brands fa-facebook"></i><span>Follow us</span>
-              </a>
-            </div>
+          <div class="form-group">
+            <label>Student Full Name </label>
+            <input type="text" name="student_name" placeholder="Enter Full Name" required />
+            <span id="std-name-req"></span>
           </div>
-          <div class="cont-map">
-            <iframe
-              src="https://www.google.com/maps?q=Mount+Everest+Secondary+Boarding+School+Siraha&output=embed"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+
+          <div class="form-group">
+            <label>Date of Birth (AD)</label>
+            <input type="date" name="dob" required />
+            <span id="dob-req"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <select name="gender" required>
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            <span id="gender-req"></span>
+          </div>
+
+          <button type="button" onclick="checkStep1()" class="next">
+            Next
+          </button>
+        </div>
+
+        <div class="form-step step2">
+          <h2>Parent / Address Details</h2>
+
+          <div class="form-group">
+            <label>Father's Name </label>
+            <input type="text" name="father_name" placeholder="Enter Father's Name" required />
+            <span id="father-req"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Mother's Name </label>
+            <input type="text" name="mother_name" placeholder="Enter Mother's Name" required />
+            <span id="mother-req"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Contact Number </label>
+            <input type="tel" name="phone" placeholder="Enter Phone Number" maxlength="10" pattern="[0-9]{10}" required>
+
+            <span id="phone-req"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Permanent Address </label>
+            <input type="text" name="address" placeholder="Enter Permanent Address" required />
+            <span id="address-req"></span>
+          </div>
+
+          <div class="btn-group">
+            <label for="step1" class="back">Back</label>
+            <buttonclass= type="button" onclick="checkStep2()" onclick="return validatePhone()" class="next">
+              Next
+              </button>
           </div>
         </div>
 
-        <hr />
-        <h4 class="dev-name">
-          &copy; 2026 Mount Everest Secondary Boarding School. All right
-          reserved || Developed by:- Suraj Mahara
-        </h4>
+        <div class="form-step step3">
+          <h2>Academic Information</h2>
+
+          <div class="form-group">
+            <label>Applying for Class </label>
+            <select name="apply_class" required>
+              <option value="">Select Class</option>
+              <option value="PG">PG</option>
+              <option value="Nursery">Nursery</option>
+              <option value="LKG">LKG</option>
+              <option value="UKG">UKG</option>
+              <option value="One-1">One-1</option>
+              <option value="Two-2">Two-2</option>
+              <option value="Three-3">Three-3</option>
+              <option value="Four-4">Four-4</option>
+              <option value="Five-5">Five-5</option>
+              <option value="Six-6">Six-6</option>
+              <option value="Seven-7">Seven-7</option>
+              <option value="Eight-8">Eight-8</option>
+              <option value="Nine-9">Nine-9</option>
+              <option value="+2 Science">+2 Science</option>
+              <option value="+2 Management">+2 Management</option>
+              <option value="+2 Law">+2 Law</option>
+            </select>
+            <span id="applyclass-req"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Previous School Name</label>
+            <input type="text" name="previous_school" placeholder="Enter Previous School Name" />
+          </div>
+
+          <div class="form-group">
+            <label>Last Class Passed</label>
+            <input type="text" name="last_class" placeholder="Enter Last Class Passed" />
+          </div>
+
+          <div class="form-group">
+            <label>Transfer Certificate (TC)</label>
+            <input type="file" name="tc_photo" />
+          </div>
+
+          <div class="btn-group">
+            <label for="step2" class="back">Back</label>
+            <button type="button" onclick="checkStep3()" class="next">
+              Next
+            </button>
+          </div>
+        </div>
+
+        <div class="form-step step4">
+          <h2>Documents & Additional Info</h2>
+
+          <div class="form-group">
+            <label>Student Photo </label>
+            <input type="file" name="student_photo" />
+            <span id="std-pic-req"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Birth Certificate</label>
+            <input type="file" name="birth_certificate" />
+            <span id="birth-cert-req"></span>
+          </div>
+
+          <div class="form-group">
+            <label>SEE Marksheet</label>
+            <input type="file" name="see_certificate" />
+          </div>
+
+          <div class="form-group">
+            <label>Transportation Required?</label>
+            <select name="transport" required>
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            <span id="transport-req"></span>
+            <input type="hidden" name="submission_date" id="submission_date" />
+            <h1 id=""></h1>
+          </div>
+          <label for="step3" class="back">Back</label>
+          <button type="button" onclick="checkStep4()" class="submit">
+            Submit Form
+          </button>
+        </div>
+      </form>
+      <div id="success-popup" class="popup">
+        <div class="popup-content">
+          <h2>Admission Submitted Successfully!</h2>
+          <p>Thank you for applying to Mount Everest Secondary Boarding School.
+            Our admission team will review your application and contact you soon.</p>
+          <button onclick="closePopup()">OK</button>
+        </div>
       </div>
+
     </div>
-  </body>
+  </div>
+
+  <div id="CONTACT">
+    <h1 class="contact-name">Contact Us</h1>
+    <div id="Contact">
+      <div class="contact-box">
+        <div class="cont-detail">
+          <h3 class="cont-info">Contact Information</h3>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Siraha-07, Siraha District, Madhesh Pradesh, Nepal</p>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <p>033-520623, +977-9842994125, +977-9841625827</p>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <p>mounteverestschool2040@gmail.com</p>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <p>
+              Summer Season :- Sunday – Friday : 6 AM – 12 PM<br />Winter
+              Season :- Sunday – Friday : 9 AM – 4 PM
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <a href="https://www.facebook.com/MountEverestSiraha" target="_blank" class="fb-link">
+              <i class="fa-brands fa-facebook"></i><span>Follow us</span>
+            </a>
+          </div>
+        </div>
+        <div class="cont-map">
+          <iframe src="https://www.google.com/maps?q=Mount+Everest+Secondary+Boarding+School+Siraha&output=embed"
+            width="100%" height="100%" style="border: 0" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <hr />
+      <h4 class="dev-name">
+        &copy; 2026 Mount Everest Secondary Boarding School. All right
+        reserved || Developed by:- Suraj Mahara
+      </h4>
+    </div>
+  </div>
+</body>
+
 </html>

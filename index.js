@@ -121,19 +121,44 @@ function checkStep2() {
     mother.focus();
     return;
   }
+// if (phone.value.trim() === "") {
+//     phone_req.innerText = "Phone number required!";
+//     phone.focus();
+//     return;
+//   }
+if (phone.value.trim() === "") {
+  phone_req.innerText = "Phone number required!";
+  phone.focus();
+  return;
+}
+// Only numbers allow (live typing)
+phone.addEventListener("input", function () {
+  this.value = this.value.replace(/\D/g, "");
+});
+
+// 10 digit validation when clicking Next
+function validatePhone() {
 
   if (phone.value.trim() === "") {
     phone_req.innerText = "Phone number required!";
     phone.focus();
-    return;
+    return false;
   }
 
-  if (address.value.trim() === "") {
+  if (phone.value.length !== 10) {
+    phone_req.innerText = "Phone number must be 10 digits!";
+    phone.focus();
+    return false;
+  }
+
+  phone_req.innerText = "";
+  return true;
+}
+ if (address.value.trim() === "") {
     address_req.innerText = "Address required!";
     address.focus();
     return;
   }
-
   document.getElementById("step3").checked = true;
 }
 
@@ -185,13 +210,31 @@ function checkStep4() {
 
   if (transport.value === "") {
     transport_req.innerText = "Please select transportation option!";
-    transport.focus();
+    transport.focus()
     return;
   }
 
-  document.getElementById("submission_date").value = new Date()
-    .toISOString()
-    .split("T")[0];
 
-  document.querySelector("form").submit();
+  // document.getElementById("step4").checked = true;
+  // success_msg.innerText= "Successfully Submited Form";
+
+  // Submission Date auto set
+  document.getElementById("submission_date").value = new Date().toLocaleDateString();
+
+  // ✅ Popup Show
+  document.getElementById("success-popup").style.display = "flex";
 }
+
+function closePopup() {
+  // Popup hide
+  document.getElementById("success-popup").style.display = "none";
+
+  // Form reset
+  document.getElementById("admission-form").reset();
+
+  // Back to Step 1
+  document.getElementById("step1").checked = true;
+}
+
+
+  

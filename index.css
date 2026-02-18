@@ -47,7 +47,7 @@ body {
 
 .menu-toggle {
   display: none;
-  font-size: 33px;
+  font-size: 31px;
   cursor: pointer;
   color: rgb(0, 0, 0);
   position: relative;
@@ -76,7 +76,7 @@ ul {
   text-align: center;
   padding: 7px 10px;
   border-radius: 20px 0 20px 0;
-  transition: 0.3s;
+  transition: 0.6s;
 
 }
 
@@ -90,6 +90,16 @@ ul {
   background: rgb(175, 160, 235);
 }
 
+.list-item::before hover{
+  content: "";
+  width: 0%;
+  margin-left: 0;
+}
+.list-item::after hover{
+  content: "";
+  width: 100%;
+    margin-left:100%;
+}
 .list-item:hover .list-link {
   color: rgb(255, 255, 255);
 }
@@ -331,27 +341,27 @@ ul {
 
 .welcome-box .wel-name {
   animation: fadeUp 1s ease forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.6s;
 }
 
 .welcome-box .sologan-1 {
   animation: fadeUp 1s ease forwards;
-  animation-delay: 0.8s;
+  animation-delay: 1s;
 }
 
 .welcome-box .scl-name {
   animation: fadeUp 1s ease forwards;
-  animation-delay: 1.3s;
+  animation-delay: 1.5s;
 }
 
 .welcome-box .sologan-2 {
   animation: fadeUp 1s ease forwards;
-  animation-delay: 1.8s;
+  animation-delay: 2s;
 }
 
 .welcome-box .apply-btn {
   animation: fadeUpScale 1s ease forwards;
-  animation-delay: 2.2s;
+  animation-delay: 2.5s;
   transform-origin: center;
 }
 
@@ -386,7 +396,7 @@ ul {
   }
 
   .welcome-box {
-    padding: 45px 15px;
+    padding: 40px 15px;
     border-radius: 22px;
     max-width: 300px;
 
@@ -398,16 +408,18 @@ ul {
 
   .scl-name {
     font-size: 1.8rem;
-    line-height: 1.1;
+    line-height: 1.3;
+    padding-bottom: 5px;
   }
 
   .sologan-1 {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
+    padding-bottom: 10px;
   }
 
   .sologan-2 {
     font-size: 0.9rem;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   .apply-btn a {
@@ -640,7 +652,7 @@ ul {
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.5s;
   opacity: 0;
   transform: translateY(50px);
   animation: fadeUp linear forwards;
@@ -651,7 +663,8 @@ ul {
 
 .facility-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 30px rgba(59, 56, 56, 0.643);
+  border: 2px solid rgb(99, 99, 178);
 }
 
 .b-hos-pic,
@@ -682,7 +695,7 @@ ul {
   line-height: 1;
   color: #6e6767;
   text-align: center;
-  padding: 0px 10px 10px 10px;
+  padding: 5px 15px 10px 15px;
 }
 
 
@@ -700,22 +713,22 @@ ul {
 
 @media (max-width:668px) {
 
+  .facility-section{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   .facility-box {
     grid-template-columns: 1fr;
-    gap: 10px;
   }
 
   #Facility .our-fac {
     font-size: 2rem;
   }
 
-  .facility-box {
-    gap: 30px;
-  }
-
+  
   .facility-item {
     max-width: 400px;
-    height: 320px;
+    height: 300px;
     padding-bottom: 10px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
   }
@@ -728,7 +741,8 @@ ul {
   .facility-item p {
     font-size: 15px;
     line-height: 1.2;
-    padding: 0px 5px;
+    padding: 5px 10px;
+    
   }
 }
 
@@ -795,28 +809,29 @@ ul {
 .whyus-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 40px;
 }
 
+
 .whyus-card {
-  height: 270px;
+  height: 250px;
   background: #ffffff;
-  padding: 35px 30px;
+  padding: 35px 20px;
   border-radius: 18px;
   text-align: center;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease;
-  margin: 20px;
+  margin: 20px 10px 20px 10px;
 }
 
 .whyus-card i {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   color: #4a6fe8;
   margin-bottom: 18px;
 }
 
 .whyus-card h3 {
-  font-size: 27px;
+  font-size: 26px;
   color: #0b6b3a;
   margin-bottom: 12px;
 }
@@ -846,8 +861,8 @@ ul {
   }
 
   .whyus-card {
-    height: 230px;
-    max-width: 340px;
+    height: 220px;
+    max-width: 350px;
   }
 
   .whyus-card h3 {
@@ -1041,10 +1056,12 @@ ul {
 #address-req,
 #applyclass-req,
 #std-pic-req,
-#birth-pic-req,
+#birth-cert-req,
 #transport-req {
   color: red;
-  padding-left: 13px;
+  padding-left: 10px;
+  font-size: 12px;
+  font-family: sans-serif;
 }
 
 .next,
@@ -1073,8 +1090,15 @@ ul {
   background: #1b5e20;
   color: #fff;
   border: none;
+  margin-left: 30px;
 }
 
+#successful-text{
+  font-size:28px;
+  color:rgb(38, 182, 38);
+  text-align: center;
+  padding: 10px 0;
+}
 .next:hover {
   background: #1b5e20;
 }
@@ -1092,6 +1116,70 @@ ul {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+
+.popup-content {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  animation: popupFade 0.3s ease;
+}
+
+.popup-content h2 {
+  color: #28a745;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-family:sans-serif;
+}
+.popup-content p{
+  color: #a49b9b;
+  font-family: 'Franklin Gothic Medium';
+  line-height: 1;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.popup-content button {
+  padding: 8px 20px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.popup-content button:hover {
+  background: #218838;
+}
+
+/* Animation */
+@keyframes popupFade {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @media (max-width:668px) {
@@ -1126,6 +1214,16 @@ ul {
     height: 32px;
     font-size: 14px;
   }
+  .popup-content{
+    width: 250px;
+  }
+  .popup-content h2{
+    font-size: 18px;
+  }
+    .popup-content p{
+      font-size: 13px;
+       line-height: 1.1;
+    }
 }
 
 @media (min-width:669px) and (max-width:920px) {
@@ -1133,6 +1231,16 @@ ul {
   #admission-form {
     max-width: 500px;
   }
+    .popup-content{
+    width: 280px;
+  }
+  .popup-content h2{
+    font-size: 19px;
+  }
+    .popup-content p{
+      font-size: 14px;
+       line-height: 1;
+    }
 }
 
 
@@ -1388,7 +1496,7 @@ ul {
 
 hr {
   border: 1px solid white;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 @media (max-width:600px) {
@@ -1435,7 +1543,8 @@ hr {
   }
 
   .dev-name {
-    font-size: 13px;
+    font-size: 12px;
+    margin-top: 10px;
   }
 }
 
