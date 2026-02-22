@@ -44,6 +44,7 @@ onscroll = () => {
 };
 
 function checkStep1() {
+
   let std = document.querySelector('[name="student_name"]');
   let std_name_req = document.getElementById("std-name-req");
 
@@ -82,9 +83,13 @@ function checkStep1() {
   }
 
   document.getElementById("step2").checked = true;
+  setActiveStep(2);
 }
 
 function checkStep2() {
+  
+
+
   let father = document.querySelector('[name="father_name"]');
   let father_req = document.getElementById("father-req");
 
@@ -121,48 +126,29 @@ function checkStep2() {
     mother.focus();
     return;
   }
-// if (phone.value.trim() === "") {
-//     phone_req.innerText = "Phone number required!";
-//     phone.focus();
-//     return;
-//   }
+   
 if (phone.value.trim() === "") {
   phone_req.innerText = "Phone number required!";
   phone.focus();
   return;
 }
-// Only numbers allow (live typing)
+
 phone.addEventListener("input", function () {
   this.value = this.value.replace(/\D/g, "");
 });
 
-// 10 digit validation when clicking Next
-function validatePhone() {
-
-  if (phone.value.trim() === "") {
-    phone_req.innerText = "Phone number required!";
-    phone.focus();
-    return false;
-  }
-
-  if (phone.value.length !== 10) {
-    phone_req.innerText = "Phone number must be 10 digits!";
-    phone.focus();
-    return false;
-  }
-
-  phone_req.innerText = "";
-  return true;
-}
  if (address.value.trim() === "") {
     address_req.innerText = "Address required!";
     address.focus();
     return;
   }
   document.getElementById("step3").checked = true;
+  setActiveStep(3);
 }
 
 function checkStep3() {
+
+
   let apply_class = document.querySelector('[name="apply_class"]');
   let apply_class_req = document.getElementById("applyclass-req");
 
@@ -176,6 +162,7 @@ function checkStep3() {
     return;
   }
   document.getElementById("step4").checked = true;
+  setActiveStep(4);
 }
 
 function checkStep4() {
@@ -215,14 +202,9 @@ function checkStep4() {
   }
 
 
-  // document.getElementById("step4").checked = true;
-  // success_msg.innerText= "Successfully Submited Form";
-
-  // Submission Date auto set
   document.getElementById("submission_date").value = new Date().toLocaleDateString();
-
-  // ✅ Popup Show
   document.getElementById("success-popup").style.display = "flex";
+   setActiveStep(1);
 }
 
 function closePopup() {
@@ -238,3 +220,12 @@ function closePopup() {
 
 
   
+function setActiveStep(stepNumber) {
+  let steps = document.querySelectorAll(".step-num");
+
+  steps.forEach(function(step) {
+    step.classList.remove("active");
+  });
+
+  steps[stepNumber - 1].classList.add("active");
+}

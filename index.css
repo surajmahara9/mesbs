@@ -314,6 +314,7 @@ ul {
   border: none;
   padding: 16px 42px;
   border-radius: 40px;
+  margin-bottom: 20px;
   cursor: pointer;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
   transition: all 0.35s ease;
@@ -664,7 +665,7 @@ ul {
 .facility-item:hover {
   transform: translateY(-6px);
   box-shadow: 0px 10px 30px rgba(59, 56, 56, 0.643);
-  border: 2px solid rgb(99, 99, 178);
+  border: 3px solid #8f8c8c;
 }
 
 .b-hos-pic,
@@ -969,18 +970,23 @@ ul {
   margin-bottom: 30px;
 }
 
-.steps label {
+.steps .step-num{
+  background: #bde0c8;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: #c8e6c9;
-  color: #1b5e20;
+  color: #4a934e;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+}
+.step-num.active {
+  background: #0f9d4f;
+  color:white;
 }
 
 #step1:checked~.steps label[for="step1"],
@@ -1079,6 +1085,7 @@ ul {
 .next {
   background: #2e7d32;
   color: #fff;
+  border: none;
 }
 
 .back {

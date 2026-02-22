@@ -56,7 +56,6 @@
     </div>
   </header>
 
-
   <div id="Admission-main">
     <h1 class="admission-name">Admission</h1>
     <div id="Admission">
@@ -65,20 +64,20 @@
         towards a bright future. We welcome application from students
         worldwide.
       </p>
-      <form id="admission-form">
+      <form id="admission-form" method="POST" action="save.php" enctype="multipart/form-data">
         <h1 class="Online-text">Online Form</h1>
 
         <input type="radio" name="step" id="step1" checked hidden />
         <input type="radio" name="step" id="step2" hidden />
         <input type="radio" name="step" id="step3" hidden />
         <input type="radio" name="step" id="step4" hidden />
-
         <div class="steps">
-          <label>1</label>
-          <label>2</label>
-          <label>3</label>
-          <label>4</label>
+          <label class="step-num active">1</label>
+          <label class="step-num">2</label>
+          <label class="step-num">3</label>
+          <label class="step-num">4</label>
         </div>
+
 
         <div class="form-step step1">
           <h2>Student Basic Details</h2>
@@ -140,7 +139,7 @@
           </div>
 
           <div class="btn-group">
-            <label for="step1" class="back">Back</label>
+            <label for="step1" class="back" onclick="setActiveStep(1)">Back</label>
             <buttonclass= type="button" onclick="checkStep2()" onclick="return validatePhone()" class="next">
               Next
               </button>
@@ -190,7 +189,7 @@
           </div>
 
           <div class="btn-group">
-            <label for="step2" class="back">Back</label>
+            <label for="step2" class="back" onclick="setActiveStep(2)">Back</label>
             <button type="button" onclick="checkStep3()" class="next">
               Next
             </button>
@@ -228,7 +227,7 @@
             <input type="hidden" name="submission_date" id="submission_date" />
             <h1 id=""></h1>
           </div>
-          <label for="step3" class="back">Back</label>
+          <label for="step3" class="back" onclick="setActiveStep(3)">Back</label>
           <button type="button" onclick="checkStep4()" class="submit">
             Submit Form
           </button>
