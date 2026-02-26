@@ -113,7 +113,7 @@ ul {
     position: fixed;
     top: 55px;
     right: -220px;
-    width: 220px;
+    width: 210px;
     height: 100vh;
     background: black;
     transition: 0.3s;
@@ -154,9 +154,10 @@ ul {
     top: 55px;
     right: -220px;
     background: rgba(0, 0, 0, 0.9);
-    width: 200px;
+    width: 210px;
     height: 100vh;
-    padding-top: 0px;
+    padding-top:0px;
+    gap:15px;
     transition: right 0.3s ease;
     z-index: 10;
   }
@@ -172,7 +173,7 @@ ul {
   }
 
   .list-link {
-    font-size: 18px;
+    font-size: 20px;
     display: block;
   }
 }
@@ -225,6 +226,7 @@ ul {
     background: rgba(0, 0, 0, 0.9);
     width: 230px;
     height: 100vh;
+    gap: 10px;
     padding-top: 0px;
     transition: right 0.3s ease;
     z-index: 10;
@@ -241,7 +243,7 @@ ul {
   }
 
   .list-link {
-    font-size: 19px;
+    font-size: 20px;
     display: block;
   }
 }
@@ -250,7 +252,7 @@ ul {
 #scl-pic-box {
   position: relative;
   width: 90%;
-  min-height: 90vh;
+  min-height: 100vh;
   background-image: url("Image/scl-pic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -614,7 +616,6 @@ ul {
 
 #Facility {
   width: 100%;
-  height: 1000px;
   padding-top: 50px;
   margin-top: 30px;
 }
@@ -637,15 +638,16 @@ ul {
 
 .facility-box {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  margin: 0 30px 0 30px;
 }
 
 .facility-item {
   background: rgb(225, 241, 246);
-  width: 100%;
-  height: 290px;
-  border-radius: 20px;
+  width:100%;
+  height:380px;
+  border-radius: 22px;
   margin: 20px 0 10px 0;
   text-align: center;
   display: flex;
@@ -665,7 +667,6 @@ ul {
 .facility-item:hover {
   transform: translateY(-6px);
   box-shadow: 0px 10px 30px rgba(59, 56, 56, 0.643);
-  border: 3px solid #8f8c8c;
 }
 
 .b-hos-pic,
@@ -678,25 +679,38 @@ ul {
 .semi-pic,
 .eca-pic {
   width: 100%;
-  height: 60%;
+  height:60%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
+.faci-text{
+  width:75%;
+  height:27%;
+  background:white;
+  margin: 25px 0px 5px 0;
+  padding-bottom:7px;
+  border-radius: 20px;
+  box-shadow:2px 2px 0px 2px #aaa;
+  overflow:hidden;
+}
 
 .facility-item h3 {
-  font-size: 28px;
+  font-size: 26px;
   color: blue;
-  margin: 6px 0 0 0;
+  margin: 2px 0 2px 0;
   cursor: pointer;
+  padding-bottom: 5px;
 }
 
 .facility-item p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-family: 'Roboto';
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1;
+  line-height:1;
   color: #6e6767;
   text-align: center;
-  padding: 5px 15px 10px 15px;
+  padding: 5px 10px 10px 10px;
 }
 
 
@@ -715,45 +729,54 @@ ul {
 @media (max-width:668px) {
 
   .facility-section{
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left:15px;
+    padding-right:15px;
+  
   }
   .facility-box {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   #Facility .our-fac {
     font-size: 2rem;
   }
 
-  
   .facility-item {
     max-width: 400px;
-    height: 300px;
-    padding-bottom: 10px;
+    height: 320px;
+    padding-bottom: 5px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  .faci-text{
+    width: 85%;
+    height: 40%;
+      margin: 15px 0px 10px 0;
   }
 
   .facility-item h3 {
-    font-size: 23px;
-    margin-top: 4px;
+    font-size: 22px;
+    margin:1px 2px 0 2px;
+    
   }
 
   .facility-item p {
     font-size: 15px;
-    line-height: 1.2;
-    padding: 5px 10px;
+    line-height: 1;
+    padding: 3  px 10px 5px 10px;
     
   }
 }
 
 
-
-@media (min-width:669px) and (max-width:920px) {
-
+@media (min-width:669px) and (max-width:910px) {
+ .facility-section{
+    padding-left: 20px;
+    padding-right:20px;
+  }
   .facility-box {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 
   #Facility .our-fac {
@@ -761,20 +784,26 @@ ul {
   }
 
   .facility-item {
-    height: 290px;
+    max-width: 500px;
+    height:320px;
     line-height: 0.9;
+    padding-bottom: 15px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  }
+ .faci-text{
+    width: 80%;
+    height: 40%;
   }
 
   .facility-item h3 {
-    font-size: 26px;
-    margin-top: 4px;
+    font-size: 24px;
+    margin:2px 3px 1px 3px;;
   }
 
   .facility-item p {
-    font-size: 16px;
-    line-height: 1.2;
-    padding: 0px 5px 5px 5px;
+    font-size: 13px;
+    line-height: 1;
+    padding: 3px 11px 5px 11px;
   }
 }
 
@@ -783,7 +812,7 @@ ul {
   width: 90%;
   background: white;
   padding: 0px 20px;
-  margin: 150px auto;
+  margin: 120px auto;
 }
 
 .whyus-container {
@@ -1461,6 +1490,7 @@ ul {
 
 .contact-item p {
   font-size: 17px;
+  font-family:Arial;
 }
 
 .fb-link {
@@ -1469,6 +1499,7 @@ ul {
   gap: 10px;
   text-decoration: none;
   font-size: 16px;
+
   font-weight: 500;
   color: #1060c9;
 }
@@ -1481,6 +1512,8 @@ ul {
 .fb-link span {
   color: white;
   font-size: 17px;
+    font-family:Arial;
+    padding-left: 2px;
 }
 
 .cont-map {

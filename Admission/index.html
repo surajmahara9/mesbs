@@ -127,8 +127,7 @@
 
           <div class="form-group">
             <label>Contact Number </label>
-            <input type="tel" name="phone" placeholder="Enter Phone Number" maxlength="10" pattern="[0-9]{10}" required>
-
+            <input type="tel" name="phone" placeholder="Enter Phone Number" minlength="10" maxlength="10" pattern="[0-9]{10}" required>
             <span id="phone-req"></span>
           </div>
 
@@ -259,7 +258,7 @@
 
           <div class="contact-item">
             <i class="fa-solid fa-phone"></i>
-            <p>033-520623, +977-9842994125, +977-9841625827</p>
+              <p>033-520623, +977-9842994125, 9852884125, 9805952455</p>
           </div>
 
           <div class="contact-item">
@@ -290,8 +289,8 @@
 
       <hr />
       <h4 class="dev-name">
-        &copy; 2026 Mount Everest Secondary Boarding School. All right
-        reserved || Developed by:- Suraj Mahara
+        &copy;<span id="year"></span> Mount Everest Secondary Boarding School. All rights
+        reserved <br> Developed by:- Suraj Mahara
       </h4>
     </div>
   </div>

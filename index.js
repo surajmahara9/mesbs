@@ -44,7 +44,6 @@ onscroll = () => {
 };
 
 function checkStep1() {
-
   let std = document.querySelector('[name="student_name"]');
   let std_name_req = document.getElementById("std-name-req");
 
@@ -87,9 +86,6 @@ function checkStep1() {
 }
 
 function checkStep2() {
-  
-
-
   let father = document.querySelector('[name="father_name"]');
   let father_req = document.getElementById("father-req");
 
@@ -126,18 +122,25 @@ function checkStep2() {
     mother.focus();
     return;
   }
-   
-if (phone.value.trim() === "") {
-  phone_req.innerText = "Phone number required!";
-  phone.focus();
-  return;
-}
-
 phone.addEventListener("input", function () {
-  this.value = this.value.replace(/\D/g, "");
-});
-
- if (address.value.trim() === "") {
+    this.value = this.value.replace(/\D/g, "");
+  });
+     
+   
+  if (phone.value.trim() === "") {
+    phone_req.innerText = "Phone number required!";
+    phone.focus();
+    return;
+  }
+    if(phone.value.length != 10){
+      phone_req.innerText="Number must be 10 digits";
+      phone.focus();
+      return false;
+    } else{
+            phone_req.innerText=" ";
+    }
+  
+  if (address.value.trim() === "") {
     address_req.innerText = "Address required!";
     address.focus();
     return;
@@ -147,8 +150,6 @@ phone.addEventListener("input", function () {
 }
 
 function checkStep3() {
-
-
   let apply_class = document.querySelector('[name="apply_class"]');
   let apply_class_req = document.getElementById("applyclass-req");
 
@@ -197,35 +198,27 @@ function checkStep4() {
 
   if (transport.value === "") {
     transport_req.innerText = "Please select transportation option!";
-    transport.focus()
+    transport.focus();
     return;
   }
 
-
-  document.getElementById("submission_date").value = new Date().toLocaleDateString();
+  document.getElementById("submission_date").value =
+    new Date().toLocaleDateString();
   document.getElementById("success-popup").style.display = "flex";
-   setActiveStep(1);
+  setActiveStep(1);
 }
 
 function closePopup() {
-  // Popup hide
   document.getElementById("success-popup").style.display = "none";
-
-  // Form reset
   document.getElementById("admission-form").reset();
-
-  // Back to Step 1
   document.getElementById("step1").checked = true;
 }
 
-
-  
 function setActiveStep(stepNumber) {
   let steps = document.querySelectorAll(".step-num");
-
-  steps.forEach(function(step) {
+  steps.forEach(function (step) {
     step.classList.remove("active");
   });
-
   steps[stepNumber - 1].classList.add("active");
 }
+ document.getElementById("year").innerText = new Date().getFullYear();
