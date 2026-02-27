@@ -133,7 +133,7 @@ phone.addEventListener("input", function () {
     return;
   }
     if(phone.value.length != 10){
-      phone_req.innerText="Number must be 10 digits";
+      phone_req.innerText="Number should be 10 digits";
       phone.focus();
       return false;
     } else{
