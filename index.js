@@ -1,3 +1,12 @@
+function openMenu(){
+  document.getElementById("nav-menu").style.right = "0";
+}
+
+function closeMenu(){
+  document.getElementById("nav-menu").style.right = "-300px";
+}
+
+
 let i = 0,
   f = 0;
 let j = 0,
@@ -64,19 +73,19 @@ function checkStep1() {
   };
 
   if (std.value === "") {
-    std_name_req.innerText = "Student name required!";
+    std_name_req.innerText = "required!";
     std.focus();
     return;
   }
 
   if (dob.value === "") {
-    dob_req.innerText = "Date of birth required!";
+    dob_req.innerText = "required!";
     dob.focus();
     return;
   }
 
   if (gen.value === "") {
-    gen_req.innerText = "Please select gender!";
+    gen_req.innerText = "required!";
     gen.focus();
     return;
   }
@@ -112,23 +121,24 @@ function checkStep2() {
   };
 
   if (father.value.trim() === "") {
-    father_req.innerText = "Father name required!";
+    father_req.innerText = "required!";
     father.focus();
     return;
   }
 
   if (mother.value.trim() === "") {
-    mother_req.innerText = "Mother name required!";
+    mother_req.innerText = "required!";
     mother.focus();
     return;
   }
+
 phone.addEventListener("input", function () {
     this.value = this.value.replace(/\D/g, "");
   });
      
    
   if (phone.value.trim() === "") {
-    phone_req.innerText = "Phone number required!";
+    phone_req.innerText = "required!";
     phone.focus();
     return;
   }
@@ -136,19 +146,18 @@ phone.addEventListener("input", function () {
       phone_req.innerText="Number should be 10 digits";
       phone.focus();
       return false;
-    } else{
-            phone_req.innerText=" ";
-    }
-  
-  if (address.value.trim() === "") {
-    address_req.innerText = "Address required!";
+    } 
+
+if (address.value.trim() === "") {
+    address_req.innerText = "required!";
     address.focus();
-    return;
+    return false;
   }
-  document.getElementById("step3").checked = true;
+  
+   document.getElementById("step3").checked = true;
   setActiveStep(3);
 }
-
+  
 function checkStep3() {
   let apply_class = document.querySelector('[name="apply_class"]');
   let apply_class_req = document.getElementById("applyclass-req");
@@ -158,7 +167,7 @@ function checkStep3() {
   };
 
   if (apply_class.value === "") {
-    apply_class_req.innerText = "Please select a class!";
+    apply_class_req.innerText = "required!";
     apply_class.focus();
     return;
   }
@@ -185,19 +194,19 @@ function checkStep4() {
   };
 
   if (!std_pic.files || std_pic.files.length === 0) {
-    std_pic_req.innerText = "Please upload student photo!";
+    std_pic_req.innerText = "required!";
     std_pic.focus();
     return;
   }
 
   if (!birth_cert.files || birth_cert.files.length === 0) {
-    birth_cert_req.innerText = "Please upload birth certificate!";
+    birth_cert_req.innerText = "required!";
     birth_cert.focus();
     return;
   }
 
   if (transport.value === "") {
-    transport_req.innerText = "Please select transportation option!";
+    transport_req.innerText = "required!";
     transport.focus();
     return;
   }

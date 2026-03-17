@@ -9,7 +9,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .head {
   width: 100%;
   height: 55px;
@@ -25,8 +24,8 @@ body {
 
 .scl-logo {
   position: absolute;
-  width: 75px;
-  height: 50px;
+  width: 85px;
+  height:55px;
   border-radius: 5px;
   left: 5%;
 }
@@ -41,31 +40,6 @@ body {
   height: 50px;
 }
 
-#menu-check {
-  display: none;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 31px;
-  cursor: pointer;
-  color: rgb(0, 0, 0);
-  position: relative;
-  z-index: 10;
-}
-
-.menu-toggle .close {
-  display: none;
-}
-
-.menu-overlay {
-  display: none;
-}
-
-#menu-check:checked+.menu-toggle .open {
-  display: none;
-}
-
 ul {
   list-style: none;
   display: flex;
@@ -77,7 +51,9 @@ ul {
   padding: 7px 10px;
   border-radius: 20px 0 20px 0;
   transition: 0.6s;
-
+}
+.list-item:hover{
+  background: #acb2ed;
 }
 
 .list-link {
@@ -86,86 +62,71 @@ ul {
   font-size: 19px;
 }
 
-.list-item:hover {
-  background: rgb(175, 160, 235);
-}
-
-.list-item::before hover{
-  content: "";
-  width: 0%;
-  margin-left: 0;
-}
-.list-item::after hover{
-  content: "";
-  width: 100%;
-    margin-left:100%;
-}
 .list-item:hover .list-link {
   color: rgb(255, 255, 255);
 }
 
-#menu-check:checked+.menu-toggle .close {
-  display: inline;
+.menu-toggle{
+  font-size:31px;
+  cursor:pointer;
+  color:black;
+  position:relative;
+  z-index:10;
+  display: none !important;
+}
+.close-box{
+  display: none;
+  width:40px;
+  height: 40px;
+  background: red;
+}
+.close{
+  color: white;
+  cursor: pointer;
+  font-size: 29px;
+  z-index:10;
+  margin:7px 9px;
+  position: relative;
+  display: none !important;
 }
 
-@media (max-width:668px) {
-  #nav-menu {
-    position: fixed;
-    top: 55px;
-    right: -220px;
-    width: 210px;
-    height: 100vh;
-    background: black;
-    transition: 0.3s;
-  }
-
-  .list-link {
-    color: white;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  #nav-menu label {
-    display: block;
-    cursor: pointer;
-  }
-
-  .scl-logo {
-    width: 55px;
-    height: 50px;
-  }
-
-  #nav-menu label {
-    display: block;
-    cursor: pointer;
-  }
-
-
-  #menu-check:checked~.menu-overlay {
-    display: block;
-  }
-
-
+@media (min-width:992px) and (max-width:1199px){
+.scl-logo {
+  width: 80px;
+}
+.list-link{
+  font-size: 18px;
+}
+}
+@media (min-width:769px) and (max-width:991px) {
   #nav-menu {
     flex-direction: column;
     position: fixed;
     top: 55px;
-    right: -220px;
+    right: -300px;
     background: rgba(0, 0, 0, 0.9);
-    width: 210px;
+    width: 230px;
     height: 100vh;
-    padding-top:0px;
-    gap:15px;
+    gap: 10px;
+    padding-top: 0px;
     transition: right 0.3s ease;
     z-index: 10;
   }
-
-  #menu-check:checked~#nav-menu {
-    right: 0;
+  .list-link {
+    color: white;
   }
 
+  .scl-logo {
+    width: 60px;
+    height: 50px;
+  }
+  .close-box{
+    display: block;
+  }
+   .menu-toggle,.close{
+  display: block !important;
+  
+}
   .list-item {
     padding: 15px 10px;
     width: 100%;
@@ -178,70 +139,43 @@ ul {
   }
 }
 
-@media (min-width:669px) and (max-width:920px) {
-  #nav-menu {
+@media (max-width:768px) {
+     #nav-menu {
+    flex-direction: column;
     position: fixed;
     top: 55px;
-    right: -240px;
-    width: 230px;
+    right: -300px;
+    background: rgba(0, 0, 0, 0.9);
+    width: 210px;
     height: 100vh;
-    background: black;
-    transition: 0.3s;
-  }
-
-  .menu-toggle {
-    display: block;
+    padding-top:0px;
+    gap:15px;
+    transition: right 0.3s ease;
+    z-index: 10;
   }
 
   .list-link {
     color: white;
   }
 
-  #nav-menu label {
-    display: block;
-    cursor: pointer;
-  }
-
   .scl-logo {
-    width: 60px;
+    width: 55px;
     height: 50px;
   }
-
-  #nav-menu label {
-    display: block;
-    cursor: pointer;
-  }
-
-
-  #menu-check:checked~.menu-overlay {
+  .close-box{
     display: block;
   }
-
-
-  #nav-menu {
-    flex-direction: column;
-    position: fixed;
-    top: 55px;
-    right: -240px;
-    background: rgba(0, 0, 0, 0.9);
-    width: 230px;
-    height: 100vh;
-    gap: 10px;
-    padding-top: 0px;
-    transition: right 0.3s ease;
-    z-index: 10;
-  }
-
-  #menu-check:checked~#nav-menu {
-    right: 0;
-  }
-
+  .menu-toggle,.close{
+  display: block !important; 
+}
   .list-item {
     padding: 15px 10px;
     width: 100%;
     border-radius: 20px;
   }
-
+  .list-item:hover{
+    background:transparent;
+  }
   .list-link {
     font-size: 20px;
     display: block;
@@ -280,7 +214,7 @@ ul {
 }
 
 .wel-name {
-  font-size: 2.1rem;
+  font-size: 34px;
   letter-spacing: 4px;
   color: #d0c93f;
   margin-bottom: 8px;
@@ -289,7 +223,7 @@ ul {
 }
 
 .scl-name {
-  font-size: 3.9rem;
+  font-size: 62px;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.25;
@@ -305,7 +239,7 @@ ul {
 }
 
 .sologan-2 {
-  font-size: 1.2rem;
+  font-size:19px;
   line-height: 1.8;
   color: #eaeaea;
   margin: 10px 0 15px 0;
@@ -335,23 +269,19 @@ ul {
   box-shadow: 0 22px 45px rgba(0, 0, 0, 0.45);
 }
 
-
 .welcome-box>* {
   opacity: 0;
   transform: translateY(50px);
   animation-fill-mode: forwards;
 }
-
 .welcome-box .wel-name {
   animation: fadeUp 1s ease forwards;
   animation-delay: 0.6s;
 }
-
 .welcome-box .sologan-1 {
   animation: fadeUp 1s ease forwards;
   animation-delay: 1s;
 }
-
 .welcome-box .scl-name {
   animation: fadeUp 1s ease forwards;
   animation-delay: 1.5s;
@@ -392,58 +322,43 @@ ul {
   }
 }
 
+@media (min-width:992px) and (max-width:1199px){
+#scl-pic-box{
+    padding: 60px 60px;
+  margin: 40px auto;
+}
+.welcome-box{
+    padding: 30px 70px;
+}
 
-@media (max-width:668px) {
-  #scl-pic-box {
-    background-size: 100% 90%;
-  }
+.wel-name {
+  font-size:32px;
+  margin-bottom: 6px;
+}
+.scl-name {
+  font-size: 60px;
+}
 
-  .welcome-box {
-    padding: 40px 15px;
-    border-radius: 22px;
-    max-width: 300px;
-
-  }
-
-  .wel-name {
-    font-size: 1.3rem;
-  }
-
-  .scl-name {
-    font-size: 1.8rem;
-    line-height: 1.3;
-    padding-bottom: 5px;
-  }
-
-  .sologan-1 {
-    font-size: 0.6rem;
-    padding-bottom: 10px;
-  }
-
-  .sologan-2 {
-    font-size: 0.9rem;
-    line-height: 1.2;
-  }
-
-  .apply-btn a {
-    font-size: 17px;
-  }
+.sologan-1 {
+  font-size:15px;;
+}
+.sologan-2 {
+  font-size:18px;
+}
 }
 
 
 
-@media (min-width:669px) and (max-width:920px) {
+@media (min-width:769px) and (max-width:991px){
   #scl-pic-box {
     background-size: 100% 90%;
   }
-
   .welcome-box {
     padding: 45px 25px;
     border-radius: 22px;
     max-width: 500px;
 
   }
-
   .wel-name {
     font-size: 1.8rem;
   }
@@ -467,6 +382,38 @@ ul {
   }
 }
 
+@media (max-width:768px) {
+  #scl-pic-box {
+    background-size: 100% 90%;
+  }
+  .welcome-box {
+    padding: 40px 15px;
+    border-radius: 22px;
+    max-width: 300px;
+  }
+  .wel-name {
+    font-size:21px;
+  }
+  .scl-name {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    padding-bottom: 5px;
+  }
+
+  .sologan-1 {
+    font-size: 0.6rem;
+    padding-bottom: 10px;
+  }
+
+  .sologan-2 {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  .apply-btn a {
+    font-size: 17px;
+  }
+}
 #About {
   width: 100%;
   padding: 60px 5%;
@@ -495,10 +442,11 @@ ul {
 
 .about-text-1 {
   padding-top: 30px;
-  font-size: 22px;
-  line-height: 1.1;
+  font-size: 20px;
+  line-height: 1.2;
   text-align: justify;
   color: #5f5959;
+  font-family:arial;
 }
 
 .scl-about-pic {
@@ -580,7 +528,7 @@ ul {
   }
 }
 
-@media (min-width:669px) and (max-width:920px) {
+@media (min-width:992px) and (max-width:1199px) {
   .about-box {
     flex-direction: column;
     text-align: center;
@@ -724,11 +672,11 @@ ul {
   }
 }
 
-@media (max-width:668px) {
+@media (max-width:768px) {
 
   .facility-section{
-    padding-left:15px;
-    padding-right:15px;
+    padding-left:0px;
+    padding-right:0px;
   
   }
   .facility-box {
@@ -749,7 +697,7 @@ ul {
   .faci-text{
     width: 85%;
     height: 40%;
-      margin: 15px 0px 10px 0;
+    margin: 15px 0px 10px 0;
   }
 
   .facility-item h3 {
@@ -767,7 +715,7 @@ ul {
 }
 
 
-@media (min-width:669px) and (max-width:910px) {
+@media (min-width:992px) and (max-width:1199px) {
  .facility-section{
     padding-left: 20px;
     padding-right:20px;
@@ -865,9 +813,10 @@ ul {
 }
 
 .whyus-card p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #141111;
   line-height: 1;
+  font-family: Arial, sans-serif;
 }
 
 .whyus-card:hover {
@@ -875,7 +824,10 @@ ul {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
-@media (max-width: 668px) {
+@media (max-width: 768px) {
+  .whyus{
+    padding: 0 5px;
+  }
   .whyus-name {
     font-size: 2rem;
   }
@@ -910,7 +862,7 @@ ul {
 }
 
 
-@media (min-width:669px) and (max-width:920px) {
+@media (min-width:992px) and (max-width:1199px) {
   .whyus-name {
     font-size: 2.2rem;
   }
@@ -1108,7 +1060,7 @@ ul {
 }
 
 .next {
-  background: #8295ff;
+  background: #318699;
   color: #fff;
   border: none;
 }
@@ -1183,7 +1135,7 @@ ul {
 .popup-content button {
   padding: 8px 20px;
   border: none;
-  background: #3654e8;
+  background: #7084e8;
   color: white;
   border-radius: 6px;
   cursor: pointer;
@@ -1202,7 +1154,7 @@ ul {
   }
 }
 
-@media (max-width:668px) {
+@media (max-width:768px) {
   #admission-form {
     margin: 0px 20px 50px 20px;
   }
@@ -1246,7 +1198,7 @@ ul {
     }
 }
 
-@media (min-width:669px) and (max-width:920px) {
+@media (min-width:992px) and (max-width:1199px) {
 
   #admission-form {
     max-width: 500px;
@@ -1348,6 +1300,7 @@ ul {
   font-size: 18px;
   color: #6b7280;
   line-height: 1.6;
+  font-family: Arial, sans-serif;
 }
 
 .prog-content::after {
@@ -1394,7 +1347,7 @@ ul {
 }
 
 
-@media (min-width:669px) and (max-width:920px) {
+@media (min-width:992px) and (max-width:1199px) {
   .prog-name {
     font-size: 2.2rem;
   }
@@ -1515,7 +1468,9 @@ ul {
   text-align: center;
   color: white;
   padding-top: 10px;
-  font-size: 22px;
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
 }
 
 hr {
@@ -1523,7 +1478,7 @@ hr {
   margin: 10px 0;
 }
 
-@media (max-width:600px) {
+@media (max-width:768px) {
   .contact-box {
     display: flex;
     flex-direction: column;
@@ -1573,7 +1528,7 @@ hr {
 }
 
 
-@media (min-width:669px) and (max-width:920px) {
+@media (min-width:992px) and (max-width:1199px) {
 
   .contact-box {
     display: grid;

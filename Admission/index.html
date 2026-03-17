@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../Image/scl-icon.png" />
   <title>Mount Everest Secondary Boarding School, Siraha-07</title>
   <link rel="stylesheet" href="../index.css" />
   <script src="../index.js" defer></script>
@@ -12,44 +13,28 @@
 
 <body>
   <header id="Home">
-    <div class="head">
-      <img src="../Image/scl-icon.png" alt="School Logo" class="scl-logo" />
+    <div class="head"><img src="../Image/scl-icon.png" alt="School Logo" class="scl-logo" />
 
       <nav class="menu">
-        <input type="checkbox" id="menu-check" />
-
-        <label for="menu-check" class="menu-toggle"><i class="fa-solid fa-bars open"></i><i
-            class="fa-solid fa-x close"></i>
-        </label>
-        <label for="menu-check" class="menu-overlay"></label>
+        <i class="fa-solid fa-bars menu-toggle" onclick="openMenu()"></i>
         <ul id="nav-menu">
-          <li class="list-item">
-            <a href="../index.html" class="list-link"
-              onclick="document.getElementById('menu-check').checked = false">Home</a>
+          <div class="close-box">
+            <i class="fa-solid fa-x close" onclick="closeMenu()"></i>
+          </div>
+          <li class="list-item"><a href="../index.html#scl-pic-box" class="list-link" onclick="closeMenu()">Home</a>
           </li>
-          <li class="list-item">
-            <a href="../index.html#About" class="list-link"
-              onclick="document.getElementById('menu-check').checked = false">About</a>
+          <li class="list-item"><a href="../index.html#About" class="list-link" onclick="closeMenu()">About</a>
           </li>
-          <li class="list-item">
-            <a href="#Admission-main" class="list-link"
-              onclick="document.getElementById('menu-check').checked = false">Admission</a>
+          <li class="list-item"><a href="Admission/index.html" class="list-link" onclick="closeMenu()">Admission</a>
           </li>
-          <li class="list-item">
-            <a href="../index.html#Facility" class="list-link"
-              onclick="document.getElementById('menu-check').checked = false">Facility</a>
+          <li class="list-item"><a href="../index.html#Facility" class="list-link" onclick="closeMenu()">Facility</a>
           </li>
-          <li class="list-item">
-            <a href="../index.html#Program" class="list-link"
-              onclick="document.getElementById('menu-check').checked = false">Program</a>
+          <li class="list-item"><a href="../index.html#Program" class="list-link" onclick="closeMenu()">Program</a>
           </li>
-          <!-- 
-          <li class="list-item"><a href="#" class="list-link"
-              onclick="document.getElementById('menu-check').checked = false;">Gallery</a>
-          </li> -->
-          <li class="list-item">
-            <a href="#CONTACT" class="list-link"
-              onclick="document.getElementById('menu-check').checked = false">Contact</a>
+          <!-- <li class="list-item"><a href="#" class="list-link"
+              onclick="closeMenu()">Gallery</a>
+          </li>  -->
+          <li class="list-item"><a href="#Contact" class="list-link" onclick="closeMenu()">Contact</a>
           </li>
         </ul>
       </nav>
@@ -84,14 +69,12 @@
 
           <div class="form-group">
             <label>Student Full Name </label>
-            <input type="text" name="student_name" placeholder="Enter Full Name" required />
-            <span id="std-name-req"></span>
+            <input type="text" name="student_name" placeholder="Enter Full Name" required /><span id="std-name-req"></span>
           </div>
 
           <div class="form-group">
             <label>Date of Birth (A.D.)</label>
-            <input type="date" name="dob" required />
-            <span id="dob-req"></span>
+            <input type="date" name="dob" required /><span id="dob-req"></span>
           </div>
 
           <div class="form-group">
@@ -101,8 +84,7 @@
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Other</option>
-            </select>
-            <span id="gender-req"></span>
+            </select><span id="gender-req"></span>
           </div>
 
           <button type="button" onclick="checkStep1()" class="next">
@@ -115,26 +97,23 @@
 
           <div class="form-group">
             <label>Father's Name </label>
-            <input type="text" name="father_name" placeholder="Enter Father's Name" required />
-            <span id="father-req"></span>
+            <input type="text" name="father_name" placeholder="Enter Father's Name" required /><span id="father-req"></span>
           </div>
 
           <div class="form-group">
             <label>Mother's Name </label>
-            <input type="text" name="mother_name" placeholder="Enter Mother's Name" required />
-            <span id="mother-req"></span>
+            <input type="text" name="mother_name" placeholder="Enter Mother's Name" required /><span id="mother-req"></span>
           </div>
 
           <div class="form-group">
             <label>Contact Number </label>
-            <input type="tel" name="phone" placeholder="Enter Phone Number" minlength="10" maxlength="10" pattern="[0-9]{10}" required>
-            <span id="phone-req"></span>
+            <input type="tel" name="phone" placeholder="Enter Phone Number" minlength="10" maxlength="10"
+              pattern="[0-9]{10}" required><span id="phone-req"></span>
           </div>
 
           <div class="form-group">
             <label>Permanent Address </label>
-            <input type="text" name="address" placeholder="Enter Permanent Address" required />
-            <span id="address-req"></span>
+            <input type="text" name="address" placeholder="Enter Permanent Address" required /><span id="address-req"></span>
           </div>
 
           <div class="btn-group">
@@ -169,8 +148,7 @@
               <option value="+2 Management">+2 Management</option>
               <option value="+2 Law">+2 Law</option>
               <option value="+2 Education">+2 Education </option>
-            </select>
-            <span id="applyclass-req"></span>
+            </select><span id="applyclass-req"></span>
           </div>
 
           <div class="form-group">
@@ -201,14 +179,12 @@
 
           <div class="form-group">
             <label>Student Photo </label>
-            <input type="file" name="student_photo" />
-            <span id="std-pic-req"></span>
+            <input type="file" name="student_photo" /><span id="std-pic-req"></span>
           </div>
 
           <div class="form-group">
             <label>Birth Certificate</label>
-            <input type="file" name="birth_certificate" />
-            <span id="birth-cert-req"></span>
+            <input type="file" name="birth_certificate" /><span id="birth-cert-req"></span>
           </div>
 
           <div class="form-group">
@@ -222,8 +198,7 @@
               <option value="">Select</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
-            </select>
-            <span id="transport-req"></span>
+            </select><span id="transport-req"></span>
             <input type="hidden" name="submission_date" id="submission_date" />
             <h1 id=""></h1>
           </div>
@@ -259,7 +234,7 @@
 
           <div class="contact-item">
             <i class="fa-solid fa-phone"></i>
-              <p>033-520623, +977-9842994125, 9852884125, 9805952455</p>
+            <p>033-520623, +977-9842994125, 9852884125, 9805952455</p>
           </div>
 
           <div class="contact-item">
@@ -275,8 +250,7 @@
             </p>
           </div>
 
-          <div class="contact-item">
-            <a href="https://www.facebook.com/MountEverestSiraha" target="_blank" class="fb-link">
+          <div class="contact-item"><a href="https://www.facebook.com/MountEverestSiraha" target="_blank" class="fb-link">
               <i class="fa-brands fa-facebook"></i><span>Follow us</span>
             </a>
           </div>
